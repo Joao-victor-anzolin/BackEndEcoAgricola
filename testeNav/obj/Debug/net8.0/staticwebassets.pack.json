@@ -1,0 +1,233 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\testeNav.bundle.scp.css",
+      "PackagePath": "staticwebassets\\testeNav.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\carrinho.css",
+      "PackagePath": "staticwebassets\\css\\carrinho.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\carrousel.css",
+      "PackagePath": "staticwebassets\\css\\carrousel.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\compras.css",
+      "PackagePath": "staticwebassets\\css\\compras.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\homevend.css",
+      "PackagePath": "staticwebassets\\css\\homevend.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\loginCliente.css",
+      "PackagePath": "staticwebassets\\css\\loginCliente.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\loja.css",
+      "PackagePath": "staticwebassets\\css\\loja.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\nav.css",
+      "PackagePath": "staticwebassets\\css\\nav.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\perfil.css",
+      "PackagePath": "staticwebassets\\css\\perfil.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\GiovannaSouzaMember.svg",
+      "PackagePath": "staticwebassets\\img\\GiovannaSouzaMember.svg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\HenriqueSusiMember.png",
+      "PackagePath": "staticwebassets\\img\\HenriqueSusiMember.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\JoaquimSusiMember.png",
+      "PackagePath": "staticwebassets\\img\\JoaquimSusiMember.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\JoãoVictorAnzolinMember.png",
+      "PackagePath": "staticwebassets\\img\\JoãoVictorAnzolinMember.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\Login\\logCliente.png",
+      "PackagePath": "staticwebassets\\img\\Login\\logCliente.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\Login\\logVendedor.png",
+      "PackagePath": "staticwebassets\\img\\Login\\logVendedor.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\Login\\regCliente.png",
+      "PackagePath": "staticwebassets\\img\\Login\\regCliente.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\Login\\regVendedor.png",
+      "PackagePath": "staticwebassets\\img\\Login\\regVendedor.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\Logo.svg",
+      "PackagePath": "staticwebassets\\img\\Logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\about1.png",
+      "PackagePath": "staticwebassets\\img\\about1.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\about2.png",
+      "PackagePath": "staticwebassets\\img\\about2.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\agricultores\\1.png",
+      "PackagePath": "staticwebassets\\img\\agricultores\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\agricultores\\2.png",
+      "PackagePath": "staticwebassets\\img\\agricultores\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\agricultores\\3.png",
+      "PackagePath": "staticwebassets\\img\\agricultores\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\agricultores\\4.png",
+      "PackagePath": "staticwebassets\\img\\agricultores\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\agricultores\\5.png",
+      "PackagePath": "staticwebassets\\img\\agricultores\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\banner\\1.png",
+      "PackagePath": "staticwebassets\\img\\banner\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\banner\\2.png",
+      "PackagePath": "staticwebassets\\img\\banner\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\banner\\3.png",
+      "PackagePath": "staticwebassets\\img\\banner\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\cenoura.png",
+      "PackagePath": "staticwebassets\\img\\cenoura.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\produtos\\borba.svg",
+      "PackagePath": "staticwebassets\\img\\produtos\\borba.svg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\produtos\\cabbage.svg",
+      "PackagePath": "staticwebassets\\img\\produtos\\cabbage.svg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\produtos\\carrot.svg",
+      "PackagePath": "staticwebassets\\img\\produtos\\carrot.svg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\img\\produtos\\tomato.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\tomato.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\js\\carrinho.js",
+      "PackagePath": "staticwebassets\\js\\carrinho.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\js\\compras.js",
+      "PackagePath": "staticwebassets\\js\\compras.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\js\\mapa.js",
+      "PackagePath": "staticwebassets\\js\\mapa.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\js\\perfil.js",
+      "PackagePath": "staticwebassets\\js\\perfil.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\TesteSoftware\\Func\\testeNav\\testeNav\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.testeNav.props",
+      "PackagePath": "build\\testeNav.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.testeNav.props",
+      "PackagePath": "buildMultiTargeting\\testeNav.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.testeNav.props",
+      "PackagePath": "buildTransitive\\testeNav.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.testeNav.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

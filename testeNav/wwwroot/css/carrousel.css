@@ -1,0 +1,11 @@
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  transition: all 0.5s ease;
+}
+
+.mySlides {
+  display: none;
+  border-radius: 15px;
+}

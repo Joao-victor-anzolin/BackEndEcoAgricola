@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = testeNav
+build_property.RootNamespace = testeNav
+build_property.ProjectDir = C:\Users\SENAI3EM\Desktop\TesteSoftware\Func\testeNav\testeNav\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\SENAI3EM\Desktop\TesteSoftware\Func\testeNav\testeNav
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/About/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Agricultores/Agricultores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyaWN1bHRvcmVzXEFncmljdWx0b3Jlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Carrinho/Carrinho.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ2FycmluaG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Compras/Compras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/HomeVendedor/HomeVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZlbmRlZG9yXEhvbWVWZW5kZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/LoginCliente/LoginCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5DbGllbnRlXExvZ2luQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/LoginVendedor/LoginVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5WZW5kZWRvclxMb2dpblZlbmRlZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Loja/Loja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9qYVxMb2phLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/MaisProdutos/MaisProdutos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpc1Byb2R1dG9zXE1haXNQcm9kdXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Mapa/Mapa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwYVxNYXBhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Perfil/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFBlcmZpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Produtos/Produtos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcUHJvZHV0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/TesteSoftware/Func/testeNav/testeNav/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jiixjqp6fs

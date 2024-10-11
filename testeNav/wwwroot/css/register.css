@@ -1,0 +1,45 @@
+.inputLog input{
+    width: 95%;
+    height: 40px;
+    border: 1px solid var(--medium-green);
+    border-radius: 5px;
+    padding: 0px 0px 0px 20px;
+
+}
+
+.inputLogHalf{
+    width: 48%;
+}
+
+.inputLogHalf input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid var(--medium-green);
+    border-radius: 5px;
+    padding: 0px 0px 0px 20px;
+}
+
+.inputLogSeven{
+    width: 200%;
+}
+
+.inputLogSeven input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid var(--medium-green);
+    border-radius: 5px;
+    padding: 0px 0px 0px 20px;
+}
+
+.inputLogTwenty{
+    width: 40%;
+    color: var(--medium-green);
+}
+
+.inputLogTwenty select{
+    width: 40%;
+    height: 40px;
+    border: 1px solid var(--medium-green);
+    border-radius: 5px;
+    padding: 0px 55px 0px 20px;
+}

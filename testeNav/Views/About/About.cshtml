@@ -1,0 +1,184 @@
+@{
+    ViewData["Title"] = "About";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAgricola | Home</title>
+    <link rel="stylesheet" href="~/css/carrousel.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/responsiveHome.css">
+    <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="header_mobile">
+        <button onclick=showSidebar() class="button_menu">
+            <i class="fa-solid fa-bars icon_menu"></i>
+        </button>
+
+        <div id="sideitem">
+            <a href="#"><i class="fa-solid fa-cart-shopping icon_menu"></i></a>
+            <button class="btn_style cadastrar"">Cadastrar-se</button>
+        </div>
+        <div id="sidebar-mobile">
+            <div id="nav">
+                <button onclick=hideSidebar() class="button_menu">
+                    <i class="fa-solid fa-bars icon_menu"></i>
+                </button>
+                <!-- Home -->
+                <div class="navitem">
+                    <i class="fa-solid fa-house icon"></i>
+                    <a asp-area="" asp-controller="Home" asp-action="home" class="navlink">Início</a>
+                </div>
+                <!-- Produtos -->
+                <div class="navitem">
+                    <i class="fa-solid fa-leaf icon"></i>
+                    <a asp-area="" asp-controller="Produtos" asp-action="produtos" class="navlink">Produtos</a>
+                </div>
+                <!-- Agricultores -->
+                <div class="navitem">
+                    <i class="fa-solid fa-user icon"></i>
+                    <a asp-area="" asp-controller="Agricultor" asp-action="agricultores" class="navlink">Agricultores</a>
+                </div>
+                <!-- Mapa -->
+                <div class="navitem">
+                    <i class="bi bi-geo-alt-fill icon"></i>
+                    <a asp-area="" asp-controller="Mapa" asp-action="mapa" class="navlink">Mapa</a>
+                </div>
+                <!-- Compras -->
+                <div class="navitem">
+                    <i class="bi bi-basket-fill icon"></i>
+                    <a asp-area="" asp-controller="Compras" asp-action="compras" class="navlink">Compras</a>
+                </div>
+                <!-- Carrinho -->
+                <div class="navitem">
+                    <i class="fa-solid fa-cart-shopping icon"></i>
+                    <a asp-area="" asp-controller="About" asp-action="About" class="navlink">Carrinho</a>
+                </div>
+                <!-- Sobre -->
+                <div class="navitem">
+                    <i class="bi bi-info-circle icon"></i>
+                    <a asp-area="" asp-controller="Carrinho" asp-action="carrinho" class="navlink">Sobre</a>
+                </div>
+            </div>
+            <div class="line white"></div>
+            <div id="bottom">
+                <button class="btn_style" onclick="entrar()">Entrar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <div id="logocontainer">
+           
+            <img src="~/img/Logo.svg" alt="">
+            <img src="~/img/Logo.svg" id="logo" alt="">
+            <p>EcoAgricola</p>
+        </div>
+        <div class="line white"></div>
+        <div id="nav">
+            <!-- Home -->
+            <div class="navitem">
+                <i class="fa-solid fa-house icon"></i>
+                <a asp-area="" asp-controller="Home" asp-action="home" class="navlink">Início</a>
+            </div>
+            <!-- Produtos -->
+            <div class="navitem">
+                <i class="fa-solid fa-leaf icon"></i>
+                <a asp-area="" asp-controller="Produtos" asp-action="produtos" class="navlink">Produtos</a>
+            </div>
+            <!-- Agricultores -->
+            <div class="navitem">
+                <i class="fa-solid fa-user icon"></i>
+                <a asp-area="" asp-controller="Agricultor" asp-action="agricultores" class="navlink">Agricultores</a>
+            </div>
+            <!-- Mapa -->
+            <div class="navitem">
+                <i class="bi bi-geo-alt-fill icon"></i>
+                <a asp-area="" asp-controller="Mapa" asp-action="mapa" class="navlink">Mapa</a>
+            </div>
+            <!-- Compras -->
+            <div class="navitem">
+                <i class="bi bi-basket-fill icon"></i>
+                <a asp-area="" asp-controller="Compras" asp-action="compras" class="navlink">Compras</a>
+            </div>
+            <!-- Carrinho -->
+            <div class="navitem">
+                <i class="fa-solid fa-cart-shopping icon"></i>
+                <a asp-area="" asp-controller="About" asp-action="About" class="navlink">Carrinho</a>
+            </div>
+            <!-- Sobre -->
+            <div class="navitem">
+                <i class="bi bi-info-circle icon"></i>
+                <a asp-area="" asp-controller="Carrinho" asp-action="carrinho" class="navlink">Sobre</a>
+            </div>
+        </div>
+        <div class="line white"></div>
+        <div id="bottom">
+            <button class="btn_style" onclick="entrar()">Entrar</button>
+            <button class="btn_style" onclick="register()">Cadastrar-se</button>
+        </div>
+    </div>
+    <div id="container">
+        <p class="first hidden">Sobre Nós</p>
+        <div class="line pad hidden"></div>
+
+        <div class="aboutinfo">
+            <div class="">
+                <h2>Nossa Missão</h2>
+                <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
+            </div>
+            <div class="imgabout">
+                <img src="~/img/about1.png" alt=""> 
+            </div>
+
+        </div>
+        <div class="aboutinfo">
+
+            <div class="imgabout2">
+                <img src="~/img/about2.png" alt="">
+            </div>
+
+            <div class="">
+                <h2>Quem ajudamos?</h2>
+                <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
+            </div>
+        </div>
+        <h2 style="text-align: center;
+                    margin-top: 10px;
+                    margin-bottom: 40px;">Criadores do Projeto</h2>
+        <div class="member-line">
+            <div class="member">
+                <a href="https://www.instagram.com/gih_souza_28?igsh=MXJuNmp1ZjAwaDVsYQ==" target="_blank"><img src="~/img/GiovannaSouzaMember.svg" alt=""></a>
+                <p>Giovanna de Souza</p>
+                <span>Designer e Líder</span>
+            </div>
+
+            <div class="member">
+                <a href="https://www.instagram.com/_henriquesusi?igsh=MTZ6ZnM0cTU3OTcwbg==" target="_blank"><img src="~/img/HenriqueSusiMember.png" alt=""></a>
+                <p>Henrique Susi</p>
+                <span>Desenvolvedor Back-end</span>
+            </div>
+
+            <div class="member">
+                <a href="https://www.instagram.com/anzolinjoaovictor?igsh=dG01eWF6a3Y2aHoz" target="_blank"><img src="~/img/JoãoVictorAnzolinMember.png" alt=""></a>
+                <p>João Victor Anzolin</p>
+                <span>Desenvolvedor Front-end</span>
+            </div>
+
+            <div class="member">
+                <a href="https://www.instagram.com/jo_sslva?igsh=ZHVzNGZ1eDJmZmRp" target="_blank"><img src="~/img/JoaquimSusiMember.png" alt=""></a>
+                <p>Joaquim Susi</p>
+                <span>Documentação e Design</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/d566b63b60.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</html>
