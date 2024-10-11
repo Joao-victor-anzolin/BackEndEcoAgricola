@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9352ac992ea864358fa72236eef9794c1eca0604")]
 [assembly: System.Reflection.AssemblyProductAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
