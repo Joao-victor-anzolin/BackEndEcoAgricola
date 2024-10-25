@@ -34,8 +34,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Areas/Identity/Pages/Account/_ViewImports.cshtml]
@@ -62,16 +90,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyaWN1bHRvcmVzXEFncmljdWx0b3Jlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Carrinho/Carrinho.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ2FycmluaG8uY3NodG1s
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Carrinho/Confirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Carrinho/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Compras/Compras.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/HomeVendedor/HomeVendedor.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZlbmRlZG9yXEhvbWVWZW5kZWRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Home/Index.cshtml]
@@ -80,14 +108,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/LoginCliente/LoginCliente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5DbGllbnRlXExvZ2luQ2xpZW50ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/LoginVendedor/LoginVendedor.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5WZW5kZWRvclxMb2dpblZlbmRlZG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Loja/Loja.cshtml]
@@ -102,12 +122,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwYVxNYXBhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Perfil/Perfil.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFBlcmZpbC5jc2h0bWw=
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Produtos/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Produtos/Produtos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcUHJvZHV0b3MuY3NodG1s
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Produtos/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Produtos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/ProjetoEco/testeNav/Views/Shared/Error.cshtml]

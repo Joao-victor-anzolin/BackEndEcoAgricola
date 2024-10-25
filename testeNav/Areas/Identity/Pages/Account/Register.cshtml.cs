@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using testeNav.Models;
+using testeNav.Services;
 
 namespace testeNav.Areas.Identity.Pages.Account
 {
@@ -49,29 +50,20 @@ namespace testeNav.Areas.Identity.Pages.Account
             _caminho = hostEnvironment.WebRootPath;
         }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+        
         [BindProperty]
         public InputModel Input { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+        
         public string ReturnUrl { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+        
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        public string Email { get; internal set; }
+        public string Password { get; internal set; }
+        public string UserRole { get; internal set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+        
         public class InputModel
         {
             [Required]
@@ -82,6 +74,8 @@ namespace testeNav.Areas.Identity.Pages.Account
             [Required]
             [Display(Name = "Nome")]
             public string Nome { get; set; }
+
+            public string PhoneNumber { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -102,7 +96,11 @@ namespace testeNav.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "UF")]
-            public TipoUsuario UF { get; set; }
+            public TipoUf UF { get; set; }
+
+            [Required]
+            [Display(Name = "Tipo de Usuario")]
+            public TipoUsuario TipodeUsuario { get; set; }
 
 
             // Propriedades específicas para PessoaFisica
@@ -115,6 +113,10 @@ namespace testeNav.Areas.Identity.Pages.Account
             // Propriedades específicas para Empresa
             [Display(Name = "CNPJ")]
             public string CNPJ { get; set; }
+
+            
+            [Display(Name = "Nome")]
+            public string NomeDaLoja { get; set; }
         }
 
 
@@ -136,10 +138,13 @@ namespace testeNav.Areas.Identity.Pages.Account
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
                 user.foto = Input.foto;
+                user.TipoUser = Input.TipodeUsuario;
                 user.Uf = Input.UF;
                 user.CPF = Input.CPF;
                 user.Cidade = Input.Cidade;
                 user.CNPJ = Input.CNPJ;
+                user.NomeDaLoja = Input.NomeDaLoja;
+                user.PhoneNumber = Input.PhoneNumber;
 
                 if (imgUp != null && imgUp.Length > 0)
                 {

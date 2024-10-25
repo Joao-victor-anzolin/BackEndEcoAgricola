@@ -1,6 +1,15 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@using testeNav.Models
+@model IEnumerable<testeNav.Models.ApplicationUser>
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
+
 
 <head>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -33,27 +42,32 @@
         </div>
     </div>
     <div class="line pad"></div>
-    <div id="card_agricultor">
-        <div class="card">
-            <a href="loja.html"><img src="~/img/agricultores/1.png" alt=""></a>
-            <p>Orlando Saviero</p>
-        </div>
+   @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        var fotoUser = "default.jpg";
 
-        <div class="card">
-            <img src="~/img/agricultores/2.png" alt="">
-            <p>Renato Armandilho</p>
-        </div>
+        if (await UserManager.IsInRoleAsync(user, "Vendedor"))
+        {
 
-        <div class="card">
-            <img src="~/img/agricultores/3.png" alt="">
-            <p>Ruvia Stravinski</p>
-        </div>
+            if (user.foto != null)
+            {
+            fotoUser = user.foto;
+            }
+            
+        }
 
-        <div class="card">
-            <img src="~/img/agricultores/4.png" alt="">
-            <p>Rosa Mendes</p>
-        </div>
-    </div>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="~/img/@fotoUser" alt="Foto Usuario" class="rounded-circle" width="150" height="150" />
+        </button>
+
+    }
+    else
+        {
+        <p>Bem-vindo! Faça login para ver mais.</p>
+        }
+
+
     <div id="SearchContainer">
         <a href="#cardline"><p>Produtos</p></a>
         <div id="box">

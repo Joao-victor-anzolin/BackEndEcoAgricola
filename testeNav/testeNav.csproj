@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Produtos\Criar.cshtml" />
+    <None Include="Views\Produtos\Detalhes.cshtml" />
+    <None Include="Views\Produtos\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.10" />

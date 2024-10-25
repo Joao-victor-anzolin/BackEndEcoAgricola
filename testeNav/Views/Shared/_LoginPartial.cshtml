@@ -1,13 +1,15 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿
+@using Azure.Core
+@using Microsoft.AspNetCore.Identity
 @using testeNav.Models
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
 <ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    var user = await UserManager.GetUserAsync(User);
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
         var fotoUser = "default.jpg";
 
         if (user.foto != null)
@@ -15,65 +17,44 @@
             fotoUser = user.foto;
         }
 
-        <!-- Button trigger modal -->
         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="~/img/@fotoUser" alt="Foto Usuario" class="rounded-circle" style="width: 8vh; height: 8vh; object-fit: cover;" />
         </button>
-       
 
-        <!-- First Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center">
-                    <div class="modal-header border-0 justify-content-center">
-                        <!-- Image button inside the first modal -->
-                        <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#imgUserModal" data-bs-dismiss="modal">
-                            <img src="~/img/@fotoUser" alt="Foto do Usuario" class="rounded-circle" style="width: 24vh; height: 24vh; object-fit: cover;" />
-                        </button>
-                    </div>
-                    <div>
-                        <span>Nome:</span>
-                        <span>@user.</span>
-                    </div>
-                    <div>
-                        <span>Email:</span>
-                        <span></span>
-                    </div>
-                    <div>
-                        <span>Cargo:</span>
-                        <span></span>
-                    </div>
-                    <div class="modal-footer border-0 justify-content-center d-flex flex-column">
-                        <button type="button" class="btn btn-primary px-5">
-                            <a class="nav-link text-white m-0 p-0" asp-area="Identity" asp-page="/Account/Manage/Index">Visitar Perfil</a>
-                        </button>
+        <div class="modal-footer border-0 justify-content-center d-flex flex-column">
+            @{
+                string perfilLink;
 
-                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                            <button class="btn">Sair</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                // Verifica se o usuário é um vendedor
+                if (await UserManager.IsInRoleAsync(user, "Vendedor"))
+                {
+                    perfilLink = Url.Action("Index", "Produtos");
+                }
+                else
+                {
+                    // Se não for vendedor
+                    perfilLink = Url.Page("/Account/Manage/Index",
+                    pageHandler: null,
+                    values: new { area = "Identity" });
+                }
+            }
+
+            <!-- Botão que deve levar para o perfil -->
+            <a href="@perfilLink" class="btn btn-primary">Meu Perfil</a>
+            @Html.Raw(perfilLink) 
+
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button class="btn">Sair</button>
+            </form>
         </div>
-
-        <!-- Second Modal for Larger Image -->
-        <div class="modal fade" id="imgUserModal" tabindex="-1" aria-labelledby="imgUserModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-transparent border-0">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
-                        <img src="~/img/@fotoUser" alt="Foto do Usuario Ampliada" style="max-width: 90vh; height: 90vh; object-fit: cover;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
 </ul>

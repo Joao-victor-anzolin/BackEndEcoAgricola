@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ProdutoModel>
+
+<h2>Lista de Produtos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            <ul>
+                @foreach (var produto in Model)
+                {
+                <tr>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Descricao</td>
+                    <td>@produto.Preco.ToString("C")</td>
+                    <td>
+                        <a href="@Url.Action("Detalhes", new { id = produto.Id })" class="btn btn-info">Ver</a>
+                        <a href="@Url.Action("AdicionarAoCarrinho", new { id = produto.Id })" class="btn btn-success">Adicionar ao Carrinho</a>
+                    </td>
+                    <td>
+                        <form asp-action="Deletar" method="post">
+                            <input type="hidden" name="id" value="@produto.Id" />
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </form>
+                    </td>
+                </tr>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>Nenhum produto encontrado.</p>
+        }
+        @* @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Descricao</td>
+                <td>@produto.Preco.ToString("C")</td>
+                <td>
+                    <a href="@Url.Action("Detalhes", new { id = produto.Id })" class="btn btn-info">Ver</a>
+                    <a href="@Url.Action("AdicionarAoCarrinho", new { id = produto.Id })" class="btn btn-success">Adicionar ao Carrinho</a>
+                </td>
+                <td>
+                    <form asp-action="Deletar" method="post">
+                        <input type="hidden" name="id" value="@produto.Id" />
+                        <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        } *@
+       
+    </tbody>
+</table>
+<script>
+    function confirmarDelecao() {
+        return confirm("Tem certeza que deseja deletar este produto?");
+    }
+</script>
+<a href="@Url.Action("Criar")" class="btn btn-primary">Adicionar Novo Produto</a>

@@ -1,0 +1,35 @@
+﻿@model CarrinhoModel
+
+<h2>Seu Carrinho</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Total</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Itens)
+        {
+            <tr>
+                <td>@item.Produto.Nome</td>
+                <td>@item.Quantidade</td>
+                <td>@item.Produto.Preco.ToString("C")</td>
+                <td>@item.PrecoTotal.ToString("C")</td>
+                <td>
+                    <form asp-action="RemoverDoCarrinho" method="post">
+                        <input type="hidden" name="produtoId" value="@item.Produto.Id" />
+                        <button type="submit" class="btn btn-danger">Remover</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Total: @Model.Total.ToString("C")</h3>
+<a href="@Url.Action("Checkout", "Carrinho")" class="btn btn-primary">Finalizar Compra</a>

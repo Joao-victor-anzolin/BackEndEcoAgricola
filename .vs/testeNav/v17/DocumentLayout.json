@@ -11,20 +11,16 @@
       "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\projetoeco\\testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\projetoeco\\testenav\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\projetoeco\\testenav\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\projetoeco\\testenav\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\projetoeco\\testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,54 +42,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T16:17:07.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAD4v4EAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T16:09:49.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "testeNav\\Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "testeNav\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T14:52:56.928Z",
+              "WhenOpened": "2024-10-25T10:29:25.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T16:28:00.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "testeNav\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "testeNav\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADoAAAAwAAAA",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCAAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-11T14:44:13.742Z",
+              "WhenOpened": "2024-10-24T16:24:37.85Z",
               "EditorCaption": ""
             },
             {
@@ -104,22 +87,22 @@
               "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAmwE8AAAAfAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAqwHYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:44:06.862Z",
+              "WhenOpened": "2024-10-24T16:22:27.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "testeNav\\Models\\ApplicationUser.cs",
               "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\Models\\ApplicationUser.cs",
               "RelativeToolTip": "testeNav\\Models\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAuwBIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T14:40:49.223Z",
+              "WhenOpened": "2024-10-24T16:23:14.356Z",
               "EditorCaption": ""
             }
           ]

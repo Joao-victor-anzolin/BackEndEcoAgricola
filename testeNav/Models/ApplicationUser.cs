@@ -5,7 +5,10 @@ namespace testeNav.Models
     public class ApplicationUser : IdentityUser
     {
         public string? foto { get; set; }
-        public TipoUsuario Uf { get; set; }
+        public TipoUsuario TipoUser { get; set; }
+        public TipoUf Uf { get; set; }
+
+        public string PhoneNumber { get; set; }
 
 
         // Propriedades específicas para PessoaFisica
@@ -13,10 +16,11 @@ namespace testeNav.Models
         public string? Cidade { get; set; }
 
         // Propriedades específicas para Empresa
+        public string NomeDaLoja { get; set; }
         public string? CNPJ { get; set; }
 
     }
-    public enum TipoUsuario
+    public enum TipoUf
     {
         AC,
         AL,
@@ -47,4 +51,9 @@ namespace testeNav.Models
         TO
     }
 
+    public enum TipoUsuario
+    {
+        Vendedor,
+        Cliente
+    }
 }

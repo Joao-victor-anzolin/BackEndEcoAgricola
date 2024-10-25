@@ -12,11 +12,6 @@
             <h2>Create a new account.</h2>
             <hr />
 
-            <button type="button" id="btnLoja" class="btn btn-secondary">Loja</button>
-            <br />
-            <button type="button" id="btnPessoaFisica" class="btn btn-secondary">Pessoa Física</button>
-            <br />
-
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
             <div class="form-floating mb-3">
 
@@ -31,6 +26,18 @@
                 <label asp-for="Input.Nome">Nome do Usuário</label>
                 <span asp-validation-for="Input.Nome" class="text-danger"></span>
             </div>
+            <!-- Campo Nome da loja -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.NomeDaLoja" class="form-control" placeholder="Nome" />
+                <label asp-for="Input.NomeDaLoja">Nome da Loja</label>
+                <span asp-validation-for="Input.NomeDaLoja" class="text-danger"></span>
+            </div>
+            <!-- Campo Telefone -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Telefone" />
+                <label asp-for="Input.PhoneNumber">Telefone do Usuário</label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
 
             <!-- Campo Foto -->
             <div class="form-group mb-3">
@@ -40,7 +47,7 @@
             </div>
 
 
-            <!-- Campo TipoUsuario -->
+            <!-- Campo Uf -->
             <div class="form-floating mb-3">
                 <select asp-for="Input.UF" class="form-select">
                     <option value="">Selecione o tipo de usuário</option>
@@ -79,6 +86,18 @@
                 <span asp-validation-for="Input.UF" class="text-danger"></span>
             </div>
 
+            <!-- Campo TipodeUsuario -->
+            <div class="form-floating mb-3">
+                <select asp-for="Input.TipodeUsuario" class="form-select">
+                    <option value="">Selecione o tipo de usuário</option>
+
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Cliente">Cliente</option>
+                </select>
+                <label asp-for="Input.TipodeUsuario">Tipo de Usuario</label>
+                <span asp-validation-for="Input.TipodeUsuario" class="text-danger"></span>
+            </div>
+
             <!-- Campo CPF -->
             <div class="form-floating mb-3">
                 <input asp-for="Input.CPF" id="cpf" class="form-control" placeholder="CPF" />
@@ -95,9 +114,9 @@
 
             <!-- Campo CNPJ -->
             <div class="form-floating mb-3">
-                <input asp-for="Input.CNPJ" id="cnpj" class="form-control" placeholder="CNPJ" />
+                <input asp-for="Input.CNPJ" id="cnpj" class="form-control display-none" placeholder="CNPJ" />
                 <label asp-for="Input.CNPJ">CNPJ</label>
-                <span asp-validation-for="Input.CNPJ" class="text-danger"></span>
+                <span asp-validation-for="Input.CNPJ" class="text-danger display-none"></span>
             </div>
 
             <div class="form-floating mb-3">
@@ -114,36 +133,10 @@
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
-                                article
-                                about setting up this ASP.NET application to support logging in via external services
-                            </a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
+        <button type="button" id="btnLoja" class="btn btn-secondary">Loja</button>
+        <br />
+        <button type="button" id="btnPessoaFisica" class="btn btn-secondary">Pessoa Física</button>
+        <br />
     </div>
 
     <script>

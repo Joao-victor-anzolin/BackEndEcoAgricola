@@ -1,83 +1,109 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using testeNav.Models;
+using testeNav.Data;
+using testeNav.Extensoes;
 
 namespace testeNav.Controllers
 {
     public class CarrinhoController : Controller
     {
-        // GET: CarrinhoController
-        public ActionResult Carrinho()
+        private readonly ApplicationDbContext _context;
+
+        public CarrinhoController(ApplicationDbContext context)
         {
-            return View();
+            _context = context;
         }
 
-        // GET: CarrinhoController/Details/5
-        public ActionResult Details(int id)
+        // Exibe o carrinho
+        public IActionResult Index()
         {
-            return View();
+            var carrinho = ObterCarrinho();
+            return View(carrinho);
         }
 
-        // GET: CarrinhoController/Create
-        public ActionResult Create()
+        // Adiciona item ao carrinho
+        public IActionResult AdicionarAoCarrinho(int id)
         {
-            return View();
-        }
-
-        // POST: CarrinhoController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
+            var produto = _context.Produtos.Find(id);
+            if (produto == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
-            catch
-            {
-                return View();
-            }
+
+            var carrinho = ObterCarrinho();
+
+            // Aqui você pode definir a quantidade, por exemplo, 1
+            int quantidade = 1;
+            carrinho.AdicionarItem(produto, quantidade);  // Certifique-se de passar os argumentos corretos
+            SalvarCarrinho(carrinho);
+
+            return RedirectToAction("Index", "Carrinho");
         }
 
-        // GET: CarrinhoController/Edit/5
-        public ActionResult Edit(int id)
+        // Remove item do carrinho
+        public IActionResult RemoverDoCarrinho(int produtoId)
         {
-            return View();
+            var carrinho = ObterCarrinho();
+            var itemExistente = carrinho.Itens.FirstOrDefault(i => i.Produto.Id == produtoId);
+
+            if (itemExistente != null)
+            {
+                carrinho.Itens.Remove(itemExistente);
+                SalvarCarrinho(carrinho);
+            }
+
+            return RedirectToAction("Index");
         }
 
-        // POST: CarrinhoController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // Métodos auxiliares para o carrinho na sessão
+        private CarrinhoModel ObterCarrinho()
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var carrinho = HttpContext.Session.GetObjectFromJson<CarrinhoModel>("Carrinho") ?? new CarrinhoModel();
+            return carrinho;
         }
 
-        // GET: CarrinhoController/Delete/5
-        public ActionResult Delete(int id)
+        private void SalvarCarrinho(CarrinhoModel carrinho)
         {
-            return View();
+            HttpContext.Session.SetObjectAsJson("Carrinho", carrinho);
         }
 
-        // POST: CarrinhoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public IActionResult Checkout()
         {
-            try
+            var carrinho = ObterCarrinho();  // Obtenha o carrinho da sessão
+            if (carrinho.Itens.Count == 0)
             {
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("", "O carrinho está vazio.");
+                return RedirectToAction("Index");
             }
-            catch
+
+            var pedido = new Pedido
             {
-                return View();
+                UsuarioId = User.Identity.Name,
+                DataPedido = DateTime.Now,
+                Total = carrinho.Itens.Sum(item => item.Produto.Preco * item.Quantidade),
+                Itens = new List<ItemPedido>()
+            };
+
+            foreach (var itemCarrinho in carrinho.Itens)
+            {
+                var itemPedido = new ItemPedido
+                {
+                    ProdutoId = itemCarrinho.ProdutoId,
+                    Produto = itemCarrinho.Produto,
+                    Quantidade = itemCarrinho.Quantidade,
+                    PrecoUnitario = itemCarrinho.Produto.Preco
+                };
+                pedido.Itens.Add(itemPedido);
             }
+
+
+            _context.Pedidos.Add(pedido);
+            _context.SaveChanges();
+
+            HttpContext.Session.Remove("Carrinho");
+
+            return RedirectToAction("Confirmacao");
         }
     }
 }
