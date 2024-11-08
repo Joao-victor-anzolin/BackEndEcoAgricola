@@ -183,6 +183,9 @@ namespace testeNav.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Endereco")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -190,7 +193,6 @@ namespace testeNav.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NomeDaLoja")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
@@ -205,7 +207,6 @@ namespace testeNav.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
@@ -215,6 +216,9 @@ namespace testeNav.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TipoUser")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoUsuario")
                         .HasColumnType("int");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -342,12 +346,14 @@ namespace testeNav.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImagemUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
@@ -356,6 +362,9 @@ namespace testeNav.Migrations
 
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

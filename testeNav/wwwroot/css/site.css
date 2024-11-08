@@ -33,10 +33,10 @@
     width: 85%;
 }
 
-#container a {
-    text-decoration: none;
-    color: black;
-}
+    #container a {
+        text-decoration: none;
+        color: black;
+    }
 
 #containerAgricultor a {
     text-decoration: none;
@@ -82,28 +82,17 @@ body {
     font-family: Roboto;
 }
 
-.btn_style:hover {
-    background-color: #fff;
-    color: var(--main-green);
-    cursor: pointer;
-}
+    .btn_style:hover {
+        background-color: #fff;
+        color: var(--main-green);
+        cursor: pointer;
+    }
 
 #SearchContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 40px 0px 0px 0px;
-}
-
-.input_search {
-    background-color: transparent;
-    font-family: Roboto;
-    border: none;
-    padding: 0 20px 0 0;
-    font-size: 0.6em;
-    outline: none;
-    width: 100%;
-    overflow-x: hidden;    
 }
 
 #box {
@@ -116,6 +105,17 @@ body {
     height: 35px;
     overflow-y: hidden;
 }
+
+    #box input {
+        background-color: transparent;
+        font-family: Roboto;
+        border: none;
+        padding: 0 20px 0 0;
+        font-size: 0.6em;
+        outline: none;
+        width: 600px;
+        overflow-x: hidden;
+    }
 
 .iconsearch {
     padding: 0px 10px;
@@ -141,10 +141,10 @@ body {
     margin-bottom: 15px;
 }
 
-.card img:hover {
-    opacity: 1;
-    transition: all 0.4ms ease;
-}
+    .card img:hover {
+        opacity: 1;
+        transition: all 0.4ms ease;
+    }
 
 .card {
     text-align: center;
@@ -183,75 +183,6 @@ body {
 
 /* Card Produto */
 
-#card {
-    background-color: white;
-    height: 350px;
-    width: 270px;
-    overflow-y: hidden;
-    border-radius: 15px;
-    padding: 20px;
-    border: 0.5px black solid;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 50px 20px
-}
-
-#imgcard {
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#item {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-#text h2 {
-    font-size: 1.1em;
-    font-weight: normal;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    text-align: start;
-}
-
-#cardprice {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-    #cardprice span {
-        color: #0A5C48;
-    }
-
-    #cardprice p {
-        color: #3E3E3E;
-        font-size: 0.9em;
-    }
-
-#card button {
-    margin-top: 20px;
-    width: 80%;
-    height: 40px;
-    background-color: var(--main-green);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-}
-
-#cardline {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 50px;
-}
 
 /* Sobre */
 

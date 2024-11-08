@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using testeNav.Data;
 using testeNav.Models;
 
 namespace testeNav.Controllers
@@ -8,10 +10,12 @@ namespace testeNav.Controllers
     public class HomeVendedorController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationDbContext _context;
 
         public HomeVendedorController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
+            _context = _context;
         }
 
         [Authorize]  // Garantir que o usuário esteja autenticado
@@ -44,7 +48,7 @@ namespace testeNav.Controllers
         }
 
         // GET: ProdutosController/Create
-        public ActionResult Create()
+        public ActionResult Criar()
         {
             return View();
         }
@@ -73,11 +77,13 @@ namespace testeNav.Controllers
         // POST: ProdutosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Create(ProdutoModel produto)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                _context.Produtos.Add(produto);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             catch
             {

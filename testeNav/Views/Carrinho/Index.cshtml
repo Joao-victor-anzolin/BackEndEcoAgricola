@@ -1,35 +1,190 @@
 ﻿@model CarrinhoModel
 
-<h2>Seu Carrinho</h2>
+<body>
+    <head>
+        <link rel="stylesheet" href="~/css/carrinho.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Produto</th>
-            <th>Quantidade</th>
-            <th>Preço Unitário</th>
-            <th>Total</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
+    <div id="main">
+        <p class="first hidden">Carrinho</p>
+        <div class="line pad hidden"></div>
+
+        <div class="table">
+            <div id="text">
+                <div class="content">
+                    <p>Produto</p>
+                </div>
+                <div class="content">
+                    <p>Preço</p>
+                </div>
+                <div class="content">
+                    <p>Quantidade</p>
+                </div>
+                <div class="content">
+                    <p>Total</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line pad hidden"></div>
+
         @foreach (var item in Model.Itens)
         {
-            <tr>
-                <td>@item.Produto.Nome</td>
-                <td>@item.Quantidade</td>
-                <td>@item.Produto.Preco.ToString("C")</td>
-                <td>@item.PrecoTotal.ToString("C")</td>
-                <td>
+            <div id="item-@item.Produto.Id" style="margin-bottom: 20px; display:flex;">
+                <div class="content">
+                    <div >
+                        <img style="width: 100%; height: 100%; text-align: center; object-fit: cover; border-radius: 10px;" src="@item.Produto.ImagemUrl">
+                    </div>
+
+                    <div class="prodText" style="width: 100%">
+                        <p>@item.Produto.Nome</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Preço unitário como atributo data -->
+                    <p><span data-preco="@item.Produto.Preco">@item.Produto.Preco.ToString("C")</span></p>
+                </div>
+
+                <div class="content">
+                    <div class="counter">
+                        <div class="minus">
+                            <i class="fa-solid fa-minus" onclick="decrement(@item.Produto.Id)"></i>
+                        </div>
+
+                        <div id="counter-@item.Produto.Id">@item.Quantidade</div>
+
+                        <div class="plus">
+                            <i class="fa-solid fa-plus" onclick="increment(@item.Produto.Id)"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Total do item com id único -->
+                    <p><span id="total-@item.Produto.Id" class="total-item">@item.PrecoTotal.ToString("C")</span></p>
+
                     <form asp-action="RemoverDoCarrinho" method="post">
                         <input type="hidden" name="produtoId" value="@item.Produto.Id" />
-                        <button type="submit" class="btn btn-danger">Remover</button>
+                        <button type="submit" class="btn btn-danger"></button>
                     </form>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                </div>
+            </div>
 
-<h3>Total: @Model.Total.ToString("C")</h3>
-<a href="@Url.Action("Checkout", "Carrinho")" class="btn btn-primary">Finalizar Compra</a>
+        }
+
+        <div style="margin-top: 50px; margin-left: 65%;">
+            <!-- Adiciona um id para o total geral -->
+            <h3 id="total-geral">Total: @Model.Total.ToString("C")</h3>
+            <a href="@Url.Action("Checkout", "Carrinho")" id="btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <!-- Script no final da página -->
+    <script>
+        // Função para atualizar o preço total de um produto
+        function atualizarPrecoTotal(itemId) {
+            let item = document.getElementById('item-' + itemId); // Obtém o item pelo ID
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent); // Correção do contador
+            let precoUnitario = parseFloat(item.querySelector('[data-preco]').getAttribute('data-preco'));
+
+            let precoTotal = quantidade * precoUnitario;
+
+            // Atualiza o total do item
+            item.querySelector('#total-' + itemId).textContent = precoTotal.toFixed(2).replace('.', ',');
+
+            // Atualizar o total geral
+            atualizarTotalGeral();
+        }
+
+        // Função para atualizar o total geral do carrinho
+        function atualizarTotalGeral() {
+            let totais = document.querySelectorAll('.total-item'); // Seleciona todos os totais de cada item
+            let totalGeral = 0;
+
+            totais.forEach(function (totalElement) {
+                // Corrige valores antes de somar
+                let valorItem = parseFloat(totalElement.textContent.replace('R$', '').replace(',', '.'));
+
+                if (!isNaN(valorItem)) {
+                    totalGeral += valorItem;
+                }
+            });
+
+            // Exibe o total geral formatado corretamente
+            document.getElementById('total-geral').textContent = 'Total: R$ ' + totalGeral.toFixed(2).replace('.', ',');
+        }
+
+     
+
+        // Função para atualizar o preço total de um produto
+        function atualizarPrecoTotal(itemId) {
+            let item = document.getElementById('item-' + itemId); // Obtém o item pelo ID
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent); // Correção do contador
+            let precoUnitario = parseFloat(item.querySelector('[data-preco]').getAttribute('data-preco'));
+
+            let precoTotal = quantidade * precoUnitario;
+
+            // Atualiza o total do item
+            item.querySelector('#total-' + itemId).textContent = precoTotal.toFixed(2).replace('.', ',');
+
+            // Atualizar o total geral
+            atualizarTotalGeral();
+
+            // Verificar se a quantidade é zero e remover o item
+            if (quantidade === 0) {
+                removerDoCarrinho(itemId);
+            }
+        }
+
+        // Função para remover o item do carrinho (também no backend)
+        function removerDoCarrinho(itemId) {
+            let item = document.getElementById('item-' + itemId);
+
+            // Enviar uma requisição para remover o item
+            fetch('/Carrinho/RemoverDoCarrinho', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ produtoId: itemId })
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Se a remoção for bem-sucedida, remova o item da interface
+                        item.remove();
+                        atualizarTotalGeral();
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao remover produto:', error);
+                });
+        }
+
+        // Função para incrementar a quantidade de um produto
+        function increment(itemId) {
+            let item = document.getElementById('item-' + itemId);
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent); // Correção do contador
+            item.querySelector('#counter-' + itemId).textContent = quantidade + 1;
+            atualizarPrecoTotal(itemId);
+        }
+
+        // Função para decrementar a quantidade de um produto
+        function decrement(itemId) {
+            let item = document.getElementById('item-' + itemId);
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent); // Correção do contador
+
+            if (quantidade > 1) {
+                item.querySelector('#counter-' + itemId).textContent = quantidade - 1;
+            } else if (quantidade === 1) {
+                item.querySelector('#counter-' + itemId).textContent = 0;
+            }
+            atualizarPrecoTotal(itemId);
+        }
+    </script>
+
+
+
+
+</body>

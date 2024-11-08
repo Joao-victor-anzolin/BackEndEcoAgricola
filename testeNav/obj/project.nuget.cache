@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gRgK0HWxHf04049B3hzsS60EmBe62uqyW+XvXowUduvG4aAutv5kqrcoI+81+9lhfvX3rJU08ywX+rvIqhnqaw==",
+  "dgSpecHash": "dkTC8M7vRRdhQJXJ7QDJjS7+BWTZy/BwYIsk8Kc5nE9L0t2cYBLiIBQEXZAf75R+/9Ql3L0uGIJSUlKtDnE0Mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SENAI3EM\\Desktop\\ProjetoEco\\testeNav\\testeNav.csproj",
+  "projectFilePath": "C:\\Users\\SENAI3EM\\OneDrive\\ProjetoEco\\ProjetoEco\\testeNav\\testeNav.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SENAI3EM\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\SENAI3EM\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

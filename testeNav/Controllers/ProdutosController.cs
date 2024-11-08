@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using testeNav.Data;
+using testeNav.Extensoes;
 using testeNav.Models;
 
 namespace testeNav.Controllers
@@ -20,6 +21,26 @@ namespace testeNav.Controllers
             _userManager = userManager;
             _context = context;
         }
+
+        //public async Task<IActionResult> SearchProd(Guid inCategoria, string inNome)
+        //{
+        //    var prod = await _context.Produtos.Include(c => c.Nome).ToListAsync();
+
+        //    if (inNome != null)
+        //    {
+        //        inNome = inNome.Trim().ToUpper();
+        //        prod = prod.Where(i => i.Nome.ToUpper().Contains(inNome)).ToList();
+        //    }
+
+        //    if (!inCategoria.ToString().Equals("00000000-0000-0000-0000-000000000000"))
+        //    {
+        //        prod = prod.Where(i => i.Id = inCategoria).ToList();
+        //    }
+
+        //    ViewData["Categ"] = await _context.Produtos.ToListAsync();
+        //    return View("RelatProd", prod);
+        //}
+
 
         // Perfil do usuário, verificando se é vendedor ou cliente
         [Authorize]  // Garante que o usuário esteja autenticado
@@ -59,13 +80,21 @@ namespace testeNav.Controllers
         // GET: ProdutosController
         public IActionResult Produtos()
         {
-            return View();
+            var produtos = _context.Produtos.ToList();
+            return View(produtos);
         }
 
         // GET: ProdutosController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int Id)
         {
-            return View();
+            var produto = _context.Produtos.Find(Id); // Buscar o produto pelo ID
+
+            if (produto == null)
+            {
+                return NotFound(); 
+            }
+
+            return View(produto);
         }
 
         // GET: ProdutosController/Create
@@ -77,25 +106,45 @@ namespace testeNav.Controllers
         // POST: ProdutosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+
+        public async Task<IActionResult> Create(ProdutoModel produto, IFormFile ImagemUrl)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                // Define o produto como ativo por padrão
+                produto.Ativo = true;
+
+                // Lógica para salvar a imagem
+                if (ImagemUrl != null && ImagemUrl.Length > 0)
+                {
+                    // Defina o caminho onde a imagem será salva
+                    var filePath = Path.Combine("wwwroot/img/produtos", ImagemUrl.FileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImagemUrl.CopyToAsync(stream); // Salva a imagem no servidor
+                    }
+
+                    produto.ImagemUrl = $"/img/produtos/{ImagemUrl.FileName}"; // Armazena o caminho da imagem
+                }
+
+                // Adiciona o produto ao banco de dados com o status "Ativo"
+                _context.Produtos.Add(produto);
+                await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
+
+                return RedirectToAction("Index"); // Redireciona para a lista de produtos
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(produto); // Retorna a view se houver erro de validação
         }
 
-        // GET: ProdutosController/Edit/5
+        // GET: ProdutosController/Edit
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: ProdutosController/Edit/5
+        // POST: ProdutosController/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -110,25 +159,36 @@ namespace testeNav.Controllers
             }
         }
 
-        // GET: ProdutosController/Delete/5
-        public ActionResult Delete(int id)
+        // Métodos para manipular o carrinho na sessão 
+        private CarrinhoModel ObterCarrinho()
         {
-            return View();
+            var carrinho = HttpContext.Session.GetObjectFromJson<CarrinhoModel>("Carrinho") ?? new CarrinhoModel();
+            return carrinho;
+        }
+        private void SalvarCarrinho(CarrinhoModel carrinho)
+        {
+            HttpContext.Session.SetObjectAsJson("Carrinho", carrinho);
         }
 
-        // POST: ProdutosController/Delete/5
+
+        //  ProdutosController/Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
-            try
+            var produto = _context.Produtos.Find(id);
+            if (produto == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
-            catch
-            {
-                return View();
-            }
+
+            _context.Produtos.Remove(produto);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
+
+
+
     }
 }

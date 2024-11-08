@@ -1,4 +1,12 @@
-﻿#sidebar {
+﻿:root {
+    --main-green: #0A5C36;
+    --medium-green: #0A5C48;
+    --beige: #FFF4D8;
+    --dark1: #18392B;
+    --dark2: #024035;
+}
+
+#sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,12 +22,12 @@
     font-size: 0.9em;
 }
 
-#sidebar a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    margin-left: 10px;
-}
+    #sidebar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
 
 .navitem {
     margin-bottom: 25px;
@@ -27,6 +35,10 @@
 
 #sidebar a:hover {
     text-decoration: underline;
+}
+
+.btn-register a:hover {
+    text-decoration: none;
 }
 
 .line {
@@ -66,13 +78,14 @@
     font-size: 0.9em;
     border-radius: 50px;
     font-family: Roboto;
+    justify-content: center;
 }
 
-.btn_style:hover {
-    background-color: #fff;
-    color: var(--main-green);
-    cursor: pointer;
-}
+    .btn_style:hover {
+        background-color: #fff;
+        color: var(--main-green);
+        cursor: pointer;
+    }
 
 
 #logo {
@@ -88,3 +101,21 @@
     margin: 5px 0;
 }
 
+.btn-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 10px 0px 0px 0px;
+}
+
+    .btn-register:hover {
+        background-color: white;
+        color: #0a5c36 !important;
+        transition: all 0.4s ease;
+    }

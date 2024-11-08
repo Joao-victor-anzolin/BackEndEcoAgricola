@@ -23,9 +23,9 @@ namespace testeNav.Controllers
         }
 
         // Adiciona item ao carrinho
-        public IActionResult AdicionarAoCarrinho(int id)
+        public IActionResult AdicionarAoCarrinho(int Id)
         {
-            var produto = _context.Produtos.Find(id);
+            var produto = _context.Produtos.Find(Id);
             if (produto == null)
             {
                 return NotFound();

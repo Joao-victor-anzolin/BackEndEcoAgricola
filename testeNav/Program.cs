@@ -27,12 +27,12 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => {
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 // Configurar serviços de sessão
-builder.Services.AddDistributedMemoryCache();
+builder.Services.AddDistributedMemoryCache(); // Necessário para o suporte a sessão
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Expiração da sessão em 30 minutos
+    options.Cookie.HttpOnly = true; // Segurança adicional para cookies de sessão
+    options.Cookie.IsEssential = true; // Essencial para que o cookie funcione, mesmo com políticas de privacidade
 });
 
 // Configurar MVC e Razor Pages
@@ -87,7 +87,7 @@ using (var scope = app.Services.CreateScope())
     await AssignRoleToUser(services, "exemplo@exemplo.com", "Vendedor");
 }
 
- async Task AssignRoleToUser(IServiceProvider serviceProvider, string email, string roleName)
+async Task AssignRoleToUser(IServiceProvider serviceProvider, string email, string roleName)
 {
     var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -114,6 +114,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Habilitar sessões no pipeline de middleware
+app.UseSession(); // Adiciona suporte para sessões
 
 app.UseAuthentication();
 app.UseAuthorization();

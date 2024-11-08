@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - testeNav</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/nav.css"/>
+    <link rel="stylesheet" href="~/css/nav.css" />
     <link rel="stylesheet" href="~/testeNav.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 <body>
     <header>
         <div id="sidebar">
             <div id="logocontainer">
-                <img src="img/Logo.svg" alt="Logo" id="logo">
-                <p>EcoAgricola</p>
+                <img src="~/img/Logo.svg" alt="Logo" id="logo">
             </div>
             <div class="line white"></div>
             <div id="nav">
@@ -26,18 +25,14 @@
                 <!-- Produtos -->
                 <div class="navitem">
                     <i class="fa-solid fa-leaf icon"></i>
-                    <a class="" asp-area="" asp-controller="Produtos" asp-action="produtos">Produtos</a>
+                    <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                 </div>
                 <!-- Agricultores -->
                 <div class="navitem">
                     <i class="fa-solid fa-user icon"></i>
                     <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
                 </div>
-                <!-- Mapa -->
-                <div class="navitem">
-                    <i class="bi bi-geo-alt-fill icon"></i>
-                    <a class="" asp-area="" asp-controller="Mapa" asp-action="mapa">Mapa</a>
-                </div>
+
                 <!-- Compras -->
                 <div class="navitem">
                     <i class="bi bi-basket-fill icon"></i>

@@ -32,6 +32,7 @@ namespace testeNav.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private string _caminho;
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
@@ -39,6 +40,7 @@ namespace testeNav.Areas.Identity.Pages.Account
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager,
             IWebHostEnvironment hostEnvironment)
         {
             _userManager = userManager;
@@ -48,6 +50,7 @@ namespace testeNav.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _caminho = hostEnvironment.WebRootPath;
+            _roleManager = roleManager;
         }
 
         
@@ -83,10 +86,7 @@ namespace testeNav.Areas.Identity.Pages.Account
             [Display(Name = "Password")]
             public string Password { get; set; }
 
-            [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public string ConfirmPassword { get; set; }
+          
 
             /////////////////////////////
 
@@ -110,6 +110,9 @@ namespace testeNav.Areas.Identity.Pages.Account
             [Display(Name = "Cidade")]
             public string Cidade { get; set; }
 
+            [Display(Name = "Endereço")]
+            public string Endereco { get; set; }
+
             // Propriedades específicas para Empresa
             [Display(Name = "CNPJ")]
             public string CNPJ { get; set; }
@@ -119,6 +122,11 @@ namespace testeNav.Areas.Identity.Pages.Account
             public string NomeDaLoja { get; set; }
         }
 
+        public enum TipoUsuario
+        {
+            Vendedor,
+            Cliente
+        }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
@@ -137,15 +145,18 @@ namespace testeNav.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Nome, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
+                // Preenche os dados do usuário
                 user.foto = Input.foto;
-                user.TipoUser = Input.TipodeUsuario;
+                user.TipoUser = (Models.TipoUsuario)Input.TipodeUsuario;
                 user.Uf = Input.UF;
                 user.CPF = Input.CPF;
                 user.Cidade = Input.Cidade;
                 user.CNPJ = Input.CNPJ;
                 user.NomeDaLoja = Input.NomeDaLoja;
                 user.PhoneNumber = Input.PhoneNumber;
+                user.Endereco = Input.Endereco;
 
+                // Salva a imagem de perfil do usuário se foi enviada
                 if (imgUp != null && imgUp.Length > 0)
                 {
                     string uploadsFolder = Path.Combine(_caminho, "img");
@@ -156,7 +167,6 @@ namespace testeNav.Areas.Identity.Pages.Account
                     }
 
                     string uniqueFileName = Guid.NewGuid().ToString() + "_" + imgUp.FileName;
-
                     string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -165,12 +175,27 @@ namespace testeNav.Areas.Identity.Pages.Account
                     }
                     user.foto = uniqueFileName;
                 }
+
+                // Cria o usuário
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
+                    // **Novo código para definir e atribuir a role com base no Tipo de Usuário**
+                    var roleName = (Models.TipoUsuario)Input.TipodeUsuario == Models.TipoUsuario.Vendedor ? "Vendedor" : "Cliente";
+
+                    // Verifica se a role existe, caso contrário, cria-a
+                    if (!await _roleManager.RoleExistsAsync(roleName))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(roleName));
+                    }
+
+                    // Atribui a role ao usuário recém-criado
+                    await _userManager.AddToRoleAsync(user, roleName);
+
+                    // Continuação do código existente para enviar confirmação de email
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -199,7 +224,7 @@ namespace testeNav.Areas.Identity.Pages.Account
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // Se chegamos aqui, algo falhou; redisplay form
             return Page();
         }
 

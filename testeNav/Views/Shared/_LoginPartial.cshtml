@@ -41,7 +41,7 @@
 
             <!-- Botão que deve levar para o perfil -->
             <a href="@perfilLink" class="btn btn-primary">Meu Perfil</a>
-            @Html.Raw(perfilLink) 
+            
 
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                 <button class="btn">Sair</button>
@@ -50,11 +50,23 @@
     }
     else
     {
-        <li class="nav-item">
-            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-        </li>
+        <a id="register" class="btn-register" asp-area="Identity" asp-page="/Account/Register">Cadastrar</a>
+        <a id="login" class="btn-register" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
     }
 </ul>
+
+<style>
+    .btn-register{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: 10px 0px 0px 0px;
+        transition: all 0.4s ease;
+    }
+</style>
